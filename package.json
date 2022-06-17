@@ -1,5 +1,5 @@
 {
-  "homepage":"https://everjr18.github.io/Ecommerce-React/",
+  "homepge":"https://everjr18.github.io/Ecommerce-React/",
   "name": "react-e-commerce",
   "version": "1.0.0",
   "description": "react",
@@ -7,9 +7,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack serve --open",
-    "build": "webpack --mode production",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -b master -d dist"
+    "build": "webpack --mode production"
+    
   },
   "keywords": [
     "react",

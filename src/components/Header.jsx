@@ -6,10 +6,12 @@ import menu from '@icons/icon_menu.svg';
 import logo from '@logos/logo_yard_sale.svg';
 import AppContext from '@context/AppContext'
 import shoppingCart from '@icons/icon_shopping_cart.svg';
+import SideHeader from '@components/SideHeader.jsx'
 
 const Header = () => {
   const [toggle, setToggle] = useState(false);
   const [toggleOrders, setToggleOrders] = useState(false);
+  const [toggleMenu, setToggleMenu] = useState(false)
   const { state } = useContext(AppContext);
 
   const handleToggle = () => {
@@ -17,7 +19,8 @@ const Header = () => {
   }
   return (
     <nav>
-      <img src={menu} alt="menu" className="menu" />
+      <img src={menu} alt="menu" className="menu" 
+      onClick={() => setToggleMenu(true)} />
       <div className="navbar-left">
         <img src={logo} alt="logo" className="nav-logo" />
         <ul>
@@ -50,9 +53,10 @@ const Header = () => {
             {state.cart.length > 0 ? <div>{state.cart.length}</div> : null}
           </li>
         </ul>
-      </div>
+      </div>      
       {toggle && <Menu />}
       {toggleOrders && <MyOrder toggleOrders={setToggleOrders} />}
+      {toggleMenu && <SideHeader toggleClose={setToggleMenu} />}
     </nav>
   );
 };

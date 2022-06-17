@@ -1,0 +1,60 @@
+@import 'vars';
+@media (max-width: 640px) {
+
+.left ul
+ {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    height: 60px;
+    overflow-y: scroll;
+}
+.left {
+    display: flex;
+
+}
+.left ul {
+    position: fixed;
+    left: 0;
+    width:100%;
+    height:100vh;
+    background: white;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3rem;
+    z-index: 1;
+}
+.left ul li a
+ {
+    display:flex;
+    text-decoration: none;
+    color: var(--very-light-pink);
+    border: 1px solid var(--white);
+    padding: 8px;
+    margin: 20px 0 20px 0;
+    border-radius: 8px;
+
+}
+
+.left ul li a:hover
+ {
+    border: 1px solid var(--hospital-green);
+    color: var(--hospital-green);
+
+}
+
+.close {
+    display: block;
+    background: var(--white);
+    width: 25px;
+    height: 25px;
+    position: relative;
+    top: 24px;
+    right: 40px;
+    z-index: 2;
+    padding: 12px;
+    border-radius: 50%;
+    cursor: pointer;
+    }
+}
